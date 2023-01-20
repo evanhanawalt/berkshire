@@ -1,0 +1,118 @@
+---
+const links = [
+  { main: "A Message from Warren E. Buffett" },
+  {
+    main: "News Releases from Berkshire Hathaway and from Warren Buffett",
+    caption: "Updated December 19, 2022",
+  },
+  { main: "Annual & Interim Reports", caption: "Updated November 5, 2022" },
+  { main: "Annual Meeting Information", caption: "Updated October 20, 2022" },
+  { main: "Link to SEC Filings" },
+  { main: "Berkshire Hathaway Energy Investor Presentations" },
+  { main: "Special Letters from Warren & Charlie RE:Past, Present and Future" },
+  {
+    main: "Warren Buffett's Letters to Berkshire Shareholders",
+    caption: "Updated February 26, 2022",
+  },
+  { main: "Links to Berkshire Subsidiary Companies" },
+  { main: "Charlie Munger's Letters to Wesco Shareholders" },
+  { main: "Corporate Governance" },
+  {
+    main: "Celebrating 50 Years of a Profitable Partnership",
+    caption:
+      "(A commemorative book first sold at the 2015 Annual Meeting and now for sale on eBay.)",
+  },
+  { main: "Sustainability" },
+  { main: "Common Stock Information" },
+  {
+    main: "Information Regarding Warren E. Buffett's Annual Contributions to Five Foundations",
+  },
+  {
+    main: "Facts Regarding Berkshire's 2021 Investments in Activision Common Stock",
+  },
+  { main: "Berkshire Activewear" },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>BERKSHIRE HATHAWAY UNOFFICAL</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+      html {
+        font-family: "Merriweather", serif;
+      }
+      a:visited {
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="w-full text-berkshire-blue flex flex-col items-center pt-5">
+      <h1 class="font-bold text-2xl pb-2">Berkshire Hathaway Inc.</h1>
+      <h1 class="text-lg">3555 Farnam Street</h1>
+      <h1 class="text-lg">Omaha, NE 68131</h1>
+      <h1 class="text-lg">Unofficial Home Page</h1>
+      <hr class="h-px my-8 bg-gray-500 border-0 w-[90%]" />
+      <ul class="text-base mt-3 p-5 grid grid=cols-1 lg:grid-cols-2 gap-5">
+        {
+          links.map((item, index) => {
+            return (
+              <li class="min-h-[3.5rem]">
+                <a
+                  href={`#${index}`}
+                  class="underline text-berkshire-blue  mr-2"
+                >
+                  {item.main}
+                </a>
+                {item.caption && (
+                  <>
+                    <br />
+                    <p class="text-[0.7rem]">{item.caption}</p>
+                  </>
+                )}
+              </li>
+            );
+          })
+        }
+      </ul>
+      <hr class="h-px my-8 bg-gray-500 border-0 w-[90%]" />
+      <div class="flex p-5 flex-col text-sm sm:items-center">
+        <a href="https://www.geico.com/"
+          ><img
+            alt="GEICO logo"
+            class="mb-2"
+            src="Geico_logo.svg"
+            width="100"
+          /></a
+        >
+
+        <p>
+          For a free car insurance rate quote that could save you substantial
+          money
+        </p>
+        <p>
+          <a href="https://www.geico.com/">WWW.GEICO.COM</a> or call 1-888-395-6349,
+          24 Hours a day
+        </p>
+      </div>
+      <hr class="h-px mt-8 bg-gray-500 border-0 w-[90%]" />
+
+      <footer class="p-5 w-full flex flex-col items-center">
+        <p>
+          If you have any comments about our WEB page, direct yourself to <a
+            href="https://www.berkshirehathaway.com/"
+          >
+            its inspiration</a
+          >
+        </p>
+        <br />
+        <a href="/disclaimer">Legal Disclaimer</a>
+      </footer>
+    </main>
+  </body>
+</html>
